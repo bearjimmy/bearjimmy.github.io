@@ -265,7 +265,7 @@ a { color: inherit; text-underline-offset: .22em; text-decoration-thickness: 1px
 @keyframes stamp { from { opacity: 0; scale: 1.6; } to { opacity: .85; scale: 1; } }
 
 /* ---------- 手機 ---------- */
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   body { font-size: 16px; }
   .platform { display: block; min-height: 0; padding-bottom: 40px; }
   .sign { margin: 18px 16px 0; width: auto; }
