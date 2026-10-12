@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>孟祥竣 Bright Meng</title>
+  <meta name="description" content="孟祥竣（Bright Meng）：銀行做了兩年，轉做 AI 應用開發。金融 RAG 論文、求職工具、台股資料管線與策略驗證。">
+  <meta property="og:title" content="孟祥竣 Bright Meng">
+  <meta property="og:description" content="銀行做了兩年，轉做 AI 應用開發。每一張票都是做出來、點得開的東西。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Barlow+Semi+Condensed:wght@500;600;700&family=DotGothic16&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="route" aria-label="經歷路線">
+    <ol class="route-line">
+      <li><span class="stop-name">陽信銀行</span><span class="stop-time">2024.03</span></li>
+      <li><span class="stop-name">元大銀行</span><span class="stop-time">2025.08</span></li>
+      <li><span class="stop-name">資展 AIPE03</span><span class="stop-time">2026</span></li>
+      <li><span class="stop-name">論文上 SSRN</span><span class="stop-time">2026.10</span></li>
+      <li class="is-next"><span class="stop-name">下一站　AI 應用開發</span><span class="stop-time">求職中</span></li>
+    </ol>
+  </div>
+
+  <main>
+    <section class="platform" aria-label="作品車票">
+      <header class="sign">
+        <div class="sign-plate">
+          <h1><span class="sign-zh">孟祥竣</span><span class="sign-en">BRIGHT MENG</span></h1>
+          <p class="sign-line">銀行做了兩年，轉做 AI 應用開發。<br>這裡每一張票，都是做出來、點得開的東西。</p>
+        </div>
+        <div class="sign-band">
+          <span class="sign-prev"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>金融</span>
+          <span class="sign-next">LLM・RAG・資料<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <nav class="windows" aria-label="聯絡方式">
+          <a href="mailto:ok1738ok@gmail.com">Email</a>
+          <a href="https://github.com/bearjimmy" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://pda.104.com.tw/profile/share/eWnGRshJ94ioxOdIGEbJs5pe90C4xjpP" target="_blank" rel="noopener">104 履歷</a>
+        </nav>
+      </header>
+
+      <div id="stage" class="stage" tabindex="0" aria-label="可拖曳的車票雲，方向鍵也能旋轉" aria-describedby="stage-hint">
+        <div id="cloud" class="cloud"></div>
+      </div>
+
+      <div class="legend">
+        <div class="filters" role="toolbar" aria-label="依票種篩選">
+          <button class="stub is-on" data-filter="all" aria-pressed="true">全部</button>
+          <button class="stub" data-filter="research" aria-pressed="false">研究</button>
+          <button class="stub" data-filter="project" aria-pressed="false">專案</button>
+          <button class="stub" data-filter="experience" aria-pressed="false">經歷</button>
+          <button class="stub" data-filter="skill" aria-pressed="false">技能・證照</button>
+        </div>
+        <p id="stage-hint" class="hint">拖曳翻票，點一張剪票</p>
+      </div>
+    </section>
+
+    <section class="timetable" aria-labelledby="tt-title">
+      <h2 id="tt-title">時刻表</h2>
+      <p class="tt-sub">同樣的內容，排成一張表。</p>
+      <div id="list"></div>
+    </section>
+  </main>
+
+  <div id="sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <article class="ticket-large">
+      <div class="tl-band">
+        <span id="sheet-tag"></span>
+        <span class="tl-band-r">
+          <span class="tl-serial" id="sheet-serial"></span>
+          <button class="tl-close" data-close aria-label="關閉">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </button>
+        </span>
+        <div class="stamp" aria-hidden="true"><span>已剪票</span><b id="sheet-date"></b></div>
+      </div>
+      <div class="tl-body">
+        <h3 id="sheet-title"></h3>
+        <p class="tl-sub" id="sheet-sub"></p>
+        <div class="tl-text" id="sheet-body"></div>
+        <dl class="tl-via" id="sheet-via"><dt>經由</dt><dd><ul id="sheet-stack"></ul></dd></dl>
+        <div class="tl-links" id="sheet-links"></div>
+      </div>
+    </article>
+  </div>
+
+  <footer class="foot">
+    <p>孟祥竣 Bright Meng・<a href="mailto:ok1738ok@gmail.com">ok1738ok@gmail.com</a></p>
+    <p class="foot-note">手寫 HTML／CSS／JavaScript，沒有用框架。</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
