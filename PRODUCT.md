@@ -46,7 +46,7 @@ static HTML/CSS/JavaScript，無框架、無建置步驟；部署目標 GitHub P
 
 - 論文：SSRN https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7553938（與楊德倫老師合著）
 - GitHub：https://github.com/bearjimmy （JobLens、tw-stock-strategy-validation）；團隊專案 https://github.com/our-best-project/Justmarket
-- 104 履歷：https://pda.104.com.tw/profile/share/eWnGRshJ94ioxOdIGEbJs5pe90C4xjpP
+- 104 履歷：https://pda.104.com.tw/profile/share/gy6m3ts0pJ2KMdl2V9TIr7BKbRU12wph
 - 聯絡 Email：ok1738ok@gmail.com
 - 沒有：推薦語、客戶名單、照片、作品截圖以外的圖像素材。不得杜撰。
 
